@@ -1,10 +1,9 @@
-Projet Stationnement 🚗🔧
-📌 Description
+Description
 
 Ce projet est une application de gestion de stationnement intelligente basée sur Raspberry Pi, un capteur ultrason (HC-SR04) et un servomoteur.
 L’objectif est de détecter automatiquement la présence d’un véhicule et de contrôler l’ouverture/fermeture d’une barrière via une interface web.
 
-🛠️ Technologies utilisées
+Technologies utilisées
 
 Python 3
 
