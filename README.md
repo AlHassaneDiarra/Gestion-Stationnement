@@ -1,6 +1,67 @@
-"# Gestion-Stationnement" 
-Le but de ce projet est de concevoir un système simpliste de gestion d’un stationnement. La carte électronique populaire Raspberry PI version 4 est utilisée pour ce projet. Une application web développée avec la plateforme Flask en Python sera utilisée afin de contrôler à distance la gestion du stationnement. Tout le code au complet utilisera le langage Python dans un environnement de systèmes embarqués multithread ainsi qu’une interface web FLASK développée en python. Dans le monde du web, FLASK est une des plateformes simplistes en python. L’autre plateforme web utilisant Python est Django. FLASK permettra alors d’avoir un serveur web directement sur la carte Raspberry PI. Un serveur Node.JS aurait pu être utilisé également. Le langage Python est très utilisé en développement des systèmes embarqués pour la partie de système de plus haut niveau. L’intelligence artificielle, la vision numérique en temps réel, etc utilise le langage Python étant donné l’abondance de nombreuses librairies disponibles.
-A n’importe quel moment, une auto venant de l’extérieur peut demander d’ouvrir la barrière pour entrer dans le stationnement. Aussi, à n’importe quel moment une auto étant dans le stationnement peut demander d’ouvrir la barrière afin de pouvoir sortir du stationnement. Une seule auto à la fois peut entrer ou sortir utilisant la barrière.
-Advenant le cas de conflit entre deux autos voulant utiliser la barrière pour entrer ou sortir,
-la première voiture qui détecte le capteur (intérieur ou extérieur) aura la priorité pour l’ouverture de la barrière.
-Afin de simuler le fonctionnement d’entrée et de sortie d’un stationnement, un montage électronique constitué d’un moteur servo, de deux capteurs à ultrason (un pour l’entrée des voitures et l’autre pour la sortie), une carte maîtresse Raspberry PI 4 et un module de contrôle de moteur servo seront utilisés.
+Projet Stationnement 🚗🔧
+📌 Description
+
+Ce projet est une application de gestion de stationnement intelligente basée sur Raspberry Pi, un capteur ultrason (HC-SR04) et un servomoteur.
+L’objectif est de détecter automatiquement la présence d’un véhicule et de contrôler l’ouverture/fermeture d’une barrière via une interface web.
+
+🛠️ Technologies utilisées
+
+Python 3
+
+Flask (serveur web et interface)
+
+RPi.GPIO (gestion des GPIO du Raspberry Pi)
+
+adafruit_servokit (contrôle du servomoteur)
+
+HTML/CSS (interface utilisateur)
+
+📂 Structure du projet
+Projet-Stationnement/
+│── app.py                # Application Flask principale
+│── hardware.py           # Classes pour le capteur ultrason et le servomoteur
+│── templates/
+│    └── index.html       # Page web pour contrôler le stationnement
+
+⚙️ Installation et exécution
+
+Cloner le projet
+
+git clone https://github.com/AlHassaneDiarra/Gestion-Stationnement)
+cd Projet-Stationnement
+
+
+Installer les dépendances
+
+pip install flask adafruit-circuitpython-servokit RPi.GPIO
+
+
+Lancer l’application
+
+python app.py
+
+
+Accéder à l’interface
+Ouvre ton navigateur et va sur :
+👉 http://localhost:5000
+ (ou l’adresse IP du Raspberry Pi).
+
+🎯 Fonctionnalités
+
+Détection automatique de la présence d’un véhicule via capteur ultrason.
+
+Contrôle d’une barrière (servomoteur).
+
+Interface web simple et intuitive.
+
+Journalisation (logs) pour le suivi du système.
+
+🚀 Améliorations possibles
+
+Ajout d’un système de réservation de places.
+
+Intégration d’une base de données pour sauvegarder l’historique.
+
+Support multi-capteurs pour plusieurs places de stationnement.
+
+Sécurisation de l’accès web (login/mot de passe).
